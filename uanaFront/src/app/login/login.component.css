@@ -1,0 +1,11 @@
+#img-bg{
+    background-image: url('https://cdn.pixabay.com/photo/2016/11/29/06/18/home-office-1867761_960_720.jpg');
+    min-height: 695px;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.back{
+    background-color: rgb(113, 75, 122);
+}
