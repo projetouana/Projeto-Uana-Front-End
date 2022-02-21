@@ -1,0 +1,11 @@
+#img-bg{
+    background-image: url('https://cdn.pixabay.com/photo/2016/02/07/20/38/computer-1185569_960_720.jpg');
+    min-height: 690px;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.back{
+    background-color: rgb(113, 75, 122);
+}
