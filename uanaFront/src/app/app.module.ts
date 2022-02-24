@@ -16,8 +16,7 @@ import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
     RodapeComponent,
     LoginComponent,
     CadastrarComponent,
-    SobreNosComponent,
-  
+    SobreNosComponent
   ],
   imports: [
     BrowserModule,
