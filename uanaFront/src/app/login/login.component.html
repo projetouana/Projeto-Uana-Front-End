@@ -12,17 +12,16 @@
                     <h1 class="text-center mb-3">Entrar</h1>
 
                     <div class="form-group">
-                        <label for="usuario">Usuário</label>
-                        <input class="form-control" type="txt" name="ususario" id="usuario"
-                            aria-placeholder="Seu Usuário">
+                        <label for="email">Email</label>
+                        <input [(ngModel)]="userLogin.email" class="form-control" type="email" name="email" id="email" aria-placeholder="Seu email">
                     </div>
 
                     <div class="form-group">
                         <label for="senha">Senha</label>
-                        <input class="form-control" type="txt" name="senha" id="senha" aria-placeholder="Sua Senha">
+                        <input [(ngModel)]="userLogin.senha" class="form-control" type="password" name="senha" id="senha" aria-placeholder="Sua Senha">
                     </div>
                     <div class="d-flex justify-content-center">
-                        <button type="submit" class="btn btn-success">Entrar</button>
+                        <button type="submit" class="btn btn-success" (click)="entrar()">Entrar</button>
                     </div>
                     <hr class="mt-5 mb-3">
                     <p>Não tem uma conta?<a routerLink='/cadastrar'> Cadastre-se</a>
