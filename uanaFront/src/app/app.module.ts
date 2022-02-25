@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -8,6 +9,7 @@ import { RodapeComponent } from './rodape/rodape.component';
 import { LoginComponent } from './login/login.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
