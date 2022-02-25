@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Sarala&family=Zen+Kurenaido&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.Bloco-fundo{
+box-shadow: rgba(255, 255, 255, 0,5);
+background-color: rgba(255, 255, 255, 0.3);
+backdrop-filter: blur(8px);
+-webkit-backdrop-filter: blur(8px);
+border-radius: 3%;
+position: absolute;
+top: 86px;
+}
+
+.Bloco-texto{
+    text-align: center;
+}
+
+.Titulo{
+    justify-content: center;
+    font-size: 36pt;
+    font-family: 'Sarala', sans-serif; 
+    font-weight: bold;
+    margin-top: 60px;
+    color:#0c0b22
+}
+
+.Subtitulo{
+    justify-content: center;
+    font-size: 28pt;
+    font-family: 'Sarala', sans-serif; 
+    font-weight: bold;
+    margin-top: 60px;
+    color:#0c0b22
+}
+
+.texto{
+    justify-content: center;
+    font-size: 24pt;
+    font-family:'Zen Kurenaido', sans-serif;
+    
+}
+
+.botoes{
+left: 37.26%;
+right: 51.61%;
+bottom: 14.59%;
+margin-top: 60px;
+
+}
+
+.Logar{
+background: linear-gradient(90.17deg, #5C50A9 0.19%, #90A5AD 99.77%);
+width: 185px;
+height: 60px;
+border: none;
+border-radius: 5px;
+font-family: 'Sarala', sans-serif;
+font-weight: 400;
+font-size: 24px;
+margin-bottom: 15px;
+}
+
+.Cadastrar{
+background: linear-gradient(90.17deg, #EACB30 0.19%, #F4E174 99.77%);
+width: 185px;
+height: 60px;
+border: none;
+border-radius: 5px;
+font-family: 'Sarala', sans-serif;
+font-weight: 400;
+font-size: 24px;
+margin-bottom: 15px;
+}
+
+
