@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Sarala&family=Zen+Kurenaido&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Sarala:wght@400;700&display=swap%27');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap%27');
 
 *{
     margin: 0;
@@ -37,14 +37,15 @@ top: 86px;
     font-family: 'Sarala', sans-serif; 
     font-weight: bold;
     margin-top: 60px;
-    color:#0c0b22
+    color:#0c0b22;
+    margin-bottom: 15px;
 }
 
 .texto{
     justify-content: center;
     font-size: 24pt;
     font-family:'Zen Kurenaido', sans-serif;
-    
+
 }
 
 .botoes{
