@@ -3,17 +3,21 @@
 
 
 
-<div class="container-fluid back">
-    <div class="row">
-        <div class="col-md-7" id="img-bg"></div>
+<div class="container-fluid fundo">
 
-        <div class="col-md-5 mt-5 mb-5">
+
+
+    <div class="row d-flex justify-content-center">
+      <div class="col-md-6 formulario ">
+
+        <div class="col-md-5 mt-5 mb-5 ">
 
             <div class="row d-flex justify-content-center">
-                <div class="col-md-10">
-                    <h1 class="text-center">Cadastro</h1>
 
-                    <div class="form-group">
+
+                    <h1 class="text-center titulo">Cadastre-se</h1>
+
+                    <div class="form-group forms ">
                         <label for="nome">Nome</label>
                         <input [(ngModel)]="usuario.nome" class="form-control" type="txt" name="nome" id="nome" aria-placeholder="Seu Nome">
 
@@ -52,8 +56,8 @@
 
                         <div class="d-flex justify-content-center">
 
-                            <button type="submit" class="btn btn-danger mr-4 "routerLink='/login'>Cancelar</button>
-                            <button type="submit" class="btn btn-success" (click)="cadastrar()">Cadastrar</button>
+                            <button type="submit" class="btn text-white mr-5 botao1"routerLink='/login'>Cancelar</button>
+                            <button type="submit" class="btn botao2 text-white" (click)="cadastrar()">Cadastrar</button>
                         </div>
 
                     </div>
@@ -61,5 +65,6 @@
             </div>
 
         </div>
-    </div>
+
+  </div>
 </div>
