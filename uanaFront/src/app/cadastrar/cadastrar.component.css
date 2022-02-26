@@ -1,11 +1,46 @@
-#img-bg{
-    background-image: url('https://cdn.pixabay.com/photo/2016/02/07/20/38/computer-1185569_960_720.jpg');
-    min-height: 690px;
-
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.fundo {
+  background-image: url("https://i.imgur.com/01ytHYM.png");
+  background-position: center;
+  background-size: cover;
+  height: 761px;
+  width: 1366px;
+  left: -684px;
+  top: -381px;
+  border-radius: 0px;
 }
-.back{
-    background-color: rgb(113, 75, 122);
+
+.formulario {
+  box-shadow: rgba(255, 255, 255, 0, 5);
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 3%;
+  position:absolute;
+  top: 60px;
+  height: 650px;
+  width: 650px;
+  left: 360px;
+  display: flex;
+  align-items: center;
+  padding: 60px;
+  display: flex;
+justify-content: center;
+
+
+}
+.botao1 {
+  background: linear-gradient(90.17deg, #eacb30 0.19%, #f4e174 99.77%);
+  height: 38px;
+  width: 153px;
+  left: 743px;
+  top: 593px;
+  border-radius: 5px;
+}
+.botao2 {
+  background: linear-gradient(90.17deg, #5c50a9 0.19%, #90a5ad 99.77%);
+  height: 38px;
+  width: 153px;
+  left: 743px;
+  top: 593px;
+  border-radius: 5px;
 }
