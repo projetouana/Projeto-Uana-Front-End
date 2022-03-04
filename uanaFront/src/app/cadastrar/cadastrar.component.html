@@ -15,13 +15,13 @@
             <div class="row d-flex justify-content-center">
 
 
-                    <h1 class="text-center titulo">Cadastre-se</h1>
+                    <h1 class="text-center titulo mt-3">Cadastre-se</h1>
 
                     <div class="form-group forms ">
                         <label for="nome">Nome</label>
                         <input [(ngModel)]="usuario.nome" class="form-control" type="txt" name="nome" id="nome" aria-placeholder="Seu Nome">
 
-                        <div class="form-group">
+                        <div class="form-group mt-2">
                             <label for="email">Email</label>
                             <input [(ngModel)]="usuario.email" class="form-control" type="email" name="email" id="email" aria-placeholder="Seu Email">
                         </div>
@@ -45,18 +45,18 @@
                         </div>
 
                             <div class="form-group">
-                            <label for="tipo">tipo de Usuário</label>
+                            <label for="tipo">Tipo de Usuário</label>
                             <select class="form-control" name="tipo" id="tipo" (change)="tipoUsuario($event)">
                                 <option>Selecione um tipo de usuário:</option>
                                 <option value="normal">Normal</option>
                                 <option value="empresa/ong">Empresa/ONG</option>
-                                <option value="adm">Administrador</option>
+                                <!--<option value="adm">Administrador</option> VERIFICAR-->
                             </select>
                         </div>
 
                         <div class="d-flex justify-content-center">
 
-                            <button type="submit" class="btn text-white mr-5 botao1"routerLink='/login'>Cancelar</button>
+                            <button type="submit" class="btn text-white mr-5 botao1"routerLink='/Home'>Cancelar</button>
                             <button type="submit" class="btn botao2 text-white" (click)="cadastrar()">Cadastrar</button>
                         </div>
 
