@@ -12,6 +12,8 @@ import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 import { FormsModule } from '@angular/forms';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { HomeComponent } from './home/home.component';
+import { InicioComponent } from './inicio/inicio.component';
+import { TemaComponent } from './tema/tema.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { HomeComponent } from './home/home.component';
     LoginComponent,
     CadastrarComponent,
     SobreNosComponent,
-    HomeComponent
+    HomeComponent,
+    InicioComponent,
+    TemaComponent
   ],
   imports: [
     BrowserModule,
