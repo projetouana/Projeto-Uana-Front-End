@@ -3,9 +3,10 @@ import { Usuario } from "./Usuario"
 
 export class Postagem{
     public id: number
-    public titulo: string
+    public imgUrl: string
     public texto: string
-    public data: Date
+    public dataPublic: Date
+    public contato: string
 
     public usuario: Usuario
 
