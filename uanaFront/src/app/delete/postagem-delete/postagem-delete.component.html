@@ -11,20 +11,28 @@
             <h4 class="text-center text-secondary">Você tem certeza que deseja apagar essa postagem?</h4>
         </div>
     </div>
-
-    <div class="row d-flex justify-content-center mt-4">
-        <div class="col-md-4">
-            <div class="card text-center">
-                <div class="card-body">
-                  <small class="text-muted">Tema: {{postagem.tema.descricao}}</small>
-                  <p class="card-text mt-3">{{postagem.texto}}</p>
-                  <p class="card-text"><small class="text-muted">
-                    {{postagem.dataPublic | date: 'dd/MM/yyyy'}} às {{postagem.dataPublic | date: 'HH:mm'}}
-                  </small></p>
-                </div>
-              </div>
-
+    
+    <div class="card-columns d-flex justify-content-center mt-5">
+    <div class="card text-center" style="max-width: 540px;">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="{{postagem.imgUrl}}" alt="Imagem publicação" width="100%" height="100%">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Tema: {{postagem.tema.descricao}}</h5>
+              <p class="card-text">{{postagem.texto}}</p>
+              <p class="card-text"><small class="text-muted">
+                <strong>Contato: {{postagem.contato}}</strong>
+              </small></p>
+              <p class="card-text"><small class="text-muted">{{postagem.dataPublic | date: 'dd/MM/yyyy'}} às {{postagem.dataPublic | date: 'HH:mm'}}</small></p>
+              <p class="card-text"><small class="text-muted">
+                by: {{postagem.usuario.nome}}
+              </small></p>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
 
     <div class="row mt-5">
