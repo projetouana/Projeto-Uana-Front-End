@@ -16,22 +16,22 @@ export class TemaService {
   }
 
   getAllTema(): Observable<Tema[]>{
-    return this.http.get<Tema[]>('http://localhost:8080/tema', this.token) //O mesmo token que adicionei no header
+    return this.http.get<Tema[]>('https://projetouana.herokuapp.com/tema', this.token) //O mesmo token que adicionei no header
   }
 
   getByIdTema(id: number): Observable<Tema>{
-    return this.http.get<Tema>(`http://localhost:8080/tema/${id}`, this.token )
+    return this.http.get<Tema>(`https://projetouana.herokuapp.com/tema/${id}`, this.token )
   }
 
   postTema(tema: Tema): Observable<Tema>{ //Observa minha classe de TEMA
-    return this.http.post<Tema>('http://localhost:8080/tema', tema, this.token)
+    return this.http.post<Tema>('https://projetouana.herokuapp.com/tema', tema, this.token)
   }
 
   putTema(tema: Tema): Observable<Tema>{
-    return this.http.put<Tema>('http://localhost:8080/tema', tema, this.token)
+    return this.http.put<Tema>('https://projetouana.herokuapp.com/tema', tema, this.token)
   }
 
   deleteTema(id: number){
-    return this.http.delete(`http://localhost:8080/tema/${id}`, this.token) //Como vou passar um parâmetro para o http, preciso colocar entre Crase. Outro fator, é que preciso usar o $, outro motivo para usar a crase
+    return this.http.delete(`https://projetouana.herokuapp.com/tema/${id}`, this.token) //Como vou passar um parâmetro para o http, preciso colocar entre Crase. Outro fator, é que preciso usar o $, outro motivo para usar a crase
   }
 }
