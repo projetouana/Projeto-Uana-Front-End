@@ -8,13 +8,16 @@ import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
 import { HomeComponent } from './home/home.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { LoginComponent } from './login/login.component';
+import { PonteComponent } from './ponte/ponte.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 import { TemaComponent } from './tema/tema.component';
+
 
 const routes: Routes = [
   {path: '', redirectTo: 'Home', pathMatch:'full'},
 
   {path:'Home', component: HomeComponent},
+  {path:'ponte', component: PonteComponent},
   {path:'login', component: LoginComponent},
   {path:'cadastrar', component: CadastrarComponent},
 

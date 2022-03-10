@@ -8,6 +8,7 @@ import { AuthService } from '../service/auth.service';
 import { PostagemService } from '../service/postagem.service';
 import { TemaService } from '../service/tema.service';
 
+
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
@@ -38,6 +39,8 @@ export class MenuComponent implements OnInit {
   ) { }
 
   ngOnInit(){
+    this.getAllTemas()
+    this.getAllPostagens()
   }
 
   getAllTemas(){
@@ -74,8 +77,8 @@ export class MenuComponent implements OnInit {
     this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem)=>{
       this.postagem = resp
       alert('Postagem realizada com sucesso!')
-      this.postagem = new Postagem()
-      this.getAllPostagens()
+    
+      this.router.navigate(['/ponte'])
     })
   }
 
