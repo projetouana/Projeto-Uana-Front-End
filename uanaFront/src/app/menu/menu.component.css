@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Sarala:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap');
+
 .navbar{
     background-color: #5C50A9;
     backdrop-filter: blur(20px);
@@ -8,6 +11,9 @@
     line-height: 39.13px;
     height: 106.6px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+p{
+    font-family: 'Sarala', sans-serif;
 }
 
 .edit-user{
