@@ -1,8 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Sarala:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap');
+
+
 body {
     background: #e8cbc0;
-    background: -webkit-linear-gradient(to right, #e8cbc0, #636fa4);
-    background: linear-gradient(to right, #e8cbc0, #636fa4);
-    min-height: 100vh;
+    background: -webkit-linear-gradient(to right top, #5c50a9, #4a6cb3, #4f82b4, #6a95b0, #90a5ad);
+    background-image: linear-gradient(to right top, #5c50a9, #4a6cb3, #4f82b4, #6a95b0, #90a5ad);    min-height: 100vh;
+}
+
+.voltar{
+    margin-left: 30px;
+    font-family:'Sarala', sans-serif;
+
+}
+
+.ods{
+    border-radius: 3%;
+    margin-left: 300px;
+}
+
+.titulo{
+    font-family:'Sarala', sans-serif;
+}
+
+.texto{
+    font-family:'Sarala', sans-serif;
+    font-size: 16px;
+    margin-left: 16px;
 }
 
 .social-link {
@@ -21,5 +45,7 @@ body {
 .social-link:hover, .social-link:focus {
     background: #ddd;
     text-decoration: none;
-    color: #555;
+    color: #555; 
 }
+
+
