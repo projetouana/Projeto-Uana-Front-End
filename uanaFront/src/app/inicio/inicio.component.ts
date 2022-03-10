@@ -16,10 +16,10 @@ import { TemaService } from '../service/tema.service';
 export class InicioComponent implements OnInit {
 
   postagem: Postagem = new Postagem()
-  listaPostagens: Postagem[]
+  listaPostagens: Postagem[] = []
 
   tema: Tema = new Tema()
-  listaTemas: Tema[]
+  listaTemas: Tema[] 
   idTema: number
 
   user: Usuario = new Usuario()
@@ -40,7 +40,8 @@ export class InicioComponent implements OnInit {
     }
 
     this.getAllTemas()
-    this.getAllPostagens()
+    // this.getAllPostagens()
+    this.findAllPostagens()
   }
 
   getAllTemas(){
@@ -55,9 +56,20 @@ export class InicioComponent implements OnInit {
     })
   }
 
-  getAllPostagens(){
+  // getAllPostagens(){
+  //   this.postagemService.getAllPostagens().subscribe((resp: Postagem[])=>{
+  //     this.listaPostagens = resp
+  //   })
+  // }
+
+  findAllPostagens(){
     this.postagemService.getAllPostagens().subscribe((resp: Postagem[])=>{
-      this.listaPostagens = resp
+      resp.forEach(item =>{
+         if(!item.imgUrl){
+              item.imgUrl = "https://i.stack.imgur.com/MxLUy.jpg"
+         }
+         this.listaPostagens.push(item)
+      })
     })
   }
 
@@ -78,7 +90,7 @@ export class InicioComponent implements OnInit {
       this.postagem = resp
       alert('Postagem realizada com sucesso!')
       this.postagem = new Postagem()
-      this.getAllPostagens()
+      this.findAllPostagens()
     })
   }
 
