@@ -1,89 +1,81 @@
-<!-- Navbar-->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid justify-content-between">
-      <!-- Left elements -->
-      <div class="d-flex">
-        <!-- Brand -->
-        <a class="navbar-brand me-2 mb-1 d-flex align-items-center" href="/incio">
-          <img
-            src="https://i.imgur.com/Ubc3fkM.png "
-            height="40px"
-            alt="Logo da Uaná"
-            loading="lazy"
-            style="margin-top: 2px;"
-          />
-        </a>
-  
-        <!-- Search form -->
-        <form class="input-group w-auto my-auto d-none d-sm-flex">
-          <input
-            autocomplete="off"
-            type="search"
-            class="form-control rounded"
-            placeholder="Search"
-            style="min-width: 125px;"
-          />
-          <span class="input-group-text border-0 d-none d-lg-flex"
-            ><i class="fas fa-search"></i
-          ></span>
-        </form>
+<nav class="navbar navbar-expand-lg navbar-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto d-flex align-items-center mt-1">
+      <li class="nav-item active">
+        <img src="{{foto}}" alt="Foto do usuário" width="50px" height="50px" class="img-fluid rounded-circle">
+      </li>
+      <li class="nav-item pl-3">
+        <p class="m-0 font-weight-bold fs-16">Olá, {{nome}}!</p>
+      </li>
+      <li>
+          <a [routerLink]="['/user-edit', id]"><i class="fa-solid fa-gears edit-user"></i></a>
+      </li>
+      <li>
+        <a href="" data-toggle="modal" data-target="#novaPostagem"><i class="fa-solid fa-square-plus post-img"></i></a>
+      </li>
+      
+      <!-- <li>
+          <a [routerLink]="['/user-edit', id]"><i <i class="fa-solid fa-gears"></i></a>
+      </li> -->
+  </ul>
+  <ul class="navbar-nav ml-auto d-flex align-items-center mt-1">
+      <li class="nav-item pl-3">
+          <a href="" class="mr-0 font-weight-bold fs-11" (click)='sair()'><i class="fa-solid fa-power-off post-img"></i></a>
+       </li>
+  </ul>
+  </div>
+</nav>
+
+
+
+
+
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="novaPostagem" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Nova Postagem</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+          <div class="form-group">
+            <label for="texto">Foto</label>
+            <textarea [(ngModel)]='postagem.imgUrl'  class="form-control" name="imgUrl" id="imgUrl" rows="1"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="texto">Texto</label>
+            <textarea [(ngModel)]='postagem.texto'  class="form-control" name="texto" id="texto" rows="3"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="texto">Contato</label>
+            <input type="text"[(ngModel)]='postagem.contato'  class="form-control" name="contato" id="contato" rows="1">
+          </div>
+
+          <div class="form-group">
+            <label for="texto">Escolha um tema ou <a data-dismiss="modal" routerLink="/tema">cadastre um novo</a> </label>
+            <select name="tema" id="tema" class="form-control" [(ngModel)]='idTema' (change)='findByIdTema()'>
+                <option *ngFor='let item of listaTemas' value="{{item.id}}">{{item.descricao}}</option>
+            </select>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-success" (click)="publicar()" data-dismiss="modal">Publicar</button>
+        </div>
       </div>
-      <!-- Left elements -->
-  
-      <!-- Center elements -->
-      <ul class="navbar-nav flex-row d-none d-md-flex">
-        <li class="nav-item me-3 me-lg-1 active">
-          <a class="nav-link" href="#">
-            <span><i class="fa fa-user-plus" aria-hidden="true"></i></span>
-            <span class="badge rounded-pill badge-notification bg-danger">1</span>
-          </a>
-        </li>
-  
-        <li class="nav-item me-3 me-lg-1">
-          <a class="nav-link" href="#">
-            <span><i class="fas fa-flag fa-lg"></i></span>
-          </a>
-        </li>
-  
-        <li class="nav-item me-3 me-lg-1">
-          <a class="nav-link" href="#">
-            <span><i class="fas fa-video fa-lg"></i></span>
-          </a>
-        </li>
-  
-        <li class="nav-item me-3 me-lg-1">
-          <a class="nav-link" routerLink="/sobre">
-            <span>Sobre nós</span>
-          </a>
-        </li>
-  
-        <li class="nav-item me-3 me-lg-1">
-          <a class="nav-link" href="#">
-            <span><i class="fas fa-users fa-lg"></i></span>
-            <span class="badge rounded-pill badge-notification bg-danger">2</span>
-          </a>
-        </li>
-      </ul>
-      <!-- Center elements -->
-  
-      <!-- Right elements -->
-      <ul class="navbar-nav flex-row">
-        <li class="nav-item me-3 me-lg-1">
-          <a class="nav-link d-sm-flex align-items-sm-center" href="#">
-            <img
-              src="https://mdbcdn.b-cdn.net/img/new/avatars/1.webp"
-              class="rounded-circle"
-              height="22"
-              alt="Black and White Portrait of a Man"
-              loading="lazy"
-            />
-            <strong class="d-none d-sm-block ms-1">John</strong>
-          </a>
-        </li>
-       
-         
-      </ul>
-      <!-- Right elements -->
     </div>
-  </nav>
-  <!-- Navbar -->
+  </div>
+  <!-- /Modal -->
