@@ -1,200 +1,159 @@
-<!-- <div class="container-fluid">
-    <div class="row bg-secondary d-flex align-items-center">
-
-        <div class="col-md-6">
-            
-            <div class="row d-flex justify-content-center">
-                <div class="col-md-6 text-white">
-                    <h1 class="fs-54">Seja bem vindo(a)!</h1>
-                    <h5 class="fs-18">Expresse aqui os seus pensamentos e opniões</h5>
-                </div>
-            </div>
-
-            <div class="row d-flex justify-content-center mt-3 mb-5">
-                <div class="col-md-6">
-                    <button class="btn btn-light mr-2" data-toggle="modal" data-target="#novaPostagem">Nova Postagem</button>
-                    <a class="btn btn-outline-light" href="#postagens">Ver Postagens</a>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="col-md-6 d-flex justify-content-center">
-            <img class="img-capa" src="https://i.imgur.com/B6I4woQ.png" alt="">
-        </div>
-
-    </div>
-    
-</div> -->
-<main>
-  
+<div class="main">
   <div class="container mb-0 mt-0 main" id="postagens">
-      <nav>
-          <div class="nav nav-tabs d-flex justify-content-center" id="nav-tab" role="tablist">
-  
-            <a class="nav-link active text-secondary font-weight-bold" id="nav-todasPostagens-tab" data-toggle="tab" href="#todasPostagens" role="tab" aria-controls="nav-todasPostagens" aria-selected="true">Publicação</a>
-  
-            <a (click)='findByIdUser()' class="nav-link text-secondary font-weight-bold" id="nav-minhasPostagens-tab " data-toggle="tab" href="#minhasPostagens" role="tab" aria-controls="nav-minhasPostagens" aria-selected="false">Minhas Postagens</a>
-  
-          </div>
-        </nav>
-        <div class="tab-content mt-3" id="nav-tabContent">
-  
-          <!--Card Todas as Postagens-->
+    <nav>
+      <div
+        class="nav nav-tabs d-flex justify-content-center"
+        id="nav-tab"
+        role="tablist"
+      >
+        <a
+          class="nav-link active text-secondary font-weight-bold"
+          id="nav-todasPostagens-tab"
+          data-toggle="tab"
+          href="#todasPostagens"
+          role="tab"
+          aria-controls="nav-todasPostagens"
+          aria-selected="true"
+          >Publicação</a
+        >
 
-          <div class="tab-pane fade show active" id="todasPostagens" role="tabpanel" aria-labelledby="nav-todasPostagens-tab">
+        <a
+          (click)="findByIdUser()"
+          class="nav-link text-secondary font-weight-bold"
+          id="nav-minhasPostagens-tab "
+          data-toggle="tab"
+          href="#minhasPostagens"
+          role="tab"
+          aria-controls="nav-minhasPostagens"
+          aria-selected="false"
+          >Minhas Postagens</a
+        >
+      </div>
+    </nav>
+    <div class="tab-content mt-3" id="nav-tabContent">
+      <!--Card Todas as Postagens-->
+      <div
+        class="tab-pane fade show active"
+        id="todasPostagens"
+        role="tabpanel"
+        aria-labelledby="nav-todasPostagens-tab"
+      >
+        <div class="card-columns mt-2 d-flex flex-column">
+          <div
+            class="text-center"
+            style="max-width: 100%"
+            *ngFor="let item of listaPostagens"
+          >
+            <!--inicio-->
+            <div class="container">
+              <div class="container py-4">
+                <article class="postcard light blue">
+                  <a class="postcard__img_link" href="#">
+                    <img
+                      class="postcard__img"
+                      src="{{ item.imgUrl }}"
+                      alt="Image Title"
+                    />
+                  </a>
+                  <div class="postcard__text align-items-center">
+                    <h1 class="postcard__title blue">
+                      {{ item.tema.descricao }}
+                    </h1>
+                    <div class="postcard__subtitle small">
+                      <time datetime="2020-05-25 12:00:00">
+                        <i class="fas fa-calendar-alt mr-2"></i
+                        >{{ item.dataPublic | date: "dd/MM/yyyy" }} às
+                        {{ item.dataPublic | date: "HH:mm" }}
+                      </time>
+                    </div>
+                    <div class="postcard__bar"></div>
+                    <div class="postcard__preview-txt">{{ item.texto }}</div>
+                    <ul class="postcard__tagbox d-flex justify-content-center">
+                      <li class="tag__item">
+                        <i class="fas fa-tag mr-2"></i>{{ item.contato }}
+                      </li>
 
-            <div class="card-columns mt-2 d-flex flex-column">
-              <div class=" text-center" style="max-width: 100%;" *ngFor='let item of listaPostagens'>
-                <!--inicio-->
-                <div class="container">
-      
-                  <div class="container py-4">
-      
-                    <article class="postcard dark blue">
-                      <a class="postcard__img_link" href="#">
-                        <img class="postcard__img" src="{{item.imgUrl}}" alt="Image Title" />
-                      </a>
-                      <div class="postcard__text">
-                        <h1 class="postcard__title blue">{{item.tema.descricao}}</h1>
-                        <div class="postcard__subtitle small">
-                          <time datetime="2020-05-25 12:00:00">
-                            <i class="fas fa-calendar-alt mr-2"></i>{{item.dataPublic | date: 'dd/MM/yyyy'}} às
-                            {{item.dataPublic | date: 'HH:mm'}}
-                          </time>
-                        </div>
-                        <div class="postcard__bar"></div>
-                        <div class="postcard__preview-txt">{{item.texto}}</div>
-                        <ul class="postcard__tagbox d-flex justify-content-center ">
-                          <li class="tag__item"><i class="fas fa-tag mr-2"></i>{{item.contato}}</li>
-      
-                          <li class="tag__item play blue">
-                            {{item.usuario.nome}}
-                          </li>
-                        </ul>
-                      </div>
-                    </article>
-      
-      
+                      <li class="tag__item play blue">
+                        {{ item.usuario.nome }}
+                      </li>
+                    </ul>
                   </div>
-          </div>
+                </article>
               </div>
             </div>
           </div>
-  
-          <!-- <div class="tab-pane fade show active" id="todasPostagens" role="tabpanel" aria-labelledby="nav-todasPostagens-tab">
-  
-            <div class="card-columns mt-2 d-flex flex-column">
-  
-              <div class="card text-center" style="max-width: 100%;" *ngFor='let item of listaPostagens'>
-                <div class="row no-gutters ">
-                  <div class="col-md-4">
-                    <img src="{{item.imgUrl}}" alt="Imagem publicação" width="100%" height="100%">
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <h5 class="card-title">Tema: {{item.tema.descricao}}</h5>
-                      <p class="card-text">{{item.texto}}</p>
-                      <p class="card-text"><small class="text-muted">
-                        <strong>Contato: {{item.contato}}</strong>
-                      </small></p>
-                      <p class="card-text"><small class="text-muted">{{item.dataPublic | date: 'dd/MM/yyyy'}} às {{item.dataPublic | date: 'HH:mm'}}</small></p>
-                      <p class="card-text"><small class="text-muted">
-                        by: {{item.usuario.nome}}
-                      </small></p>
+        </div>
+      </div>
+
+      <!--/Card Todas as Postagens-->
+
+      <!--Card Minhas Postagens-->
+      <div
+        class="tab-pane fade"
+        id="minhasPostagens"
+        role="tabpanel"
+        aria-labelledby="nav-minhasPostagens-tab"
+      >
+        <div class="card-columns mt-2 d-flex flex-column">
+          <div
+            class="text-center"
+            style="max-width: 100%"
+            *ngFor="let item of listaPostagens"
+          >
+            <!--inicio-->
+            <div class="container">
+              <div class="container py-4">
+                <article class="postcard dark blue">
+                  <a class="postcard__img_link" href="#">
+                    <img
+                      class="postcard__img"
+                      src="{{ item.imgUrl }}"
+                      alt="Image Title"
+                    />
+                  </a>
+                  <div class="postcard__text align-items-center">
+                    <h1 class="postcard__title blue">
+                      {{ item.tema.descricao }}
+                    </h1>
+                    <div class="postcard__subtitle small">
+                      <time datetime="2020-05-25 12:00:00">
+                        <i class="fas fa-calendar-alt mr-2"></i
+                        >{{ item.dataPublic | date: "dd/MM/yyyy" }} às
+                        {{ item.dataPublic | date: "HH:mm" }}
+                      </time>
+                    </div>
+                    <div class="postcard__bar"></div>
+                    <div class="postcard__preview-txt">{{ item.texto }}</div>
+                    <ul class="postcard__tagbox d-flex justify-content-center">
+                      <li class="tag__item">
+                        <i class="fas fa-tag mr-2"></i>{{ item.contato }}
+                      </li>
+                    </ul>
+                    <div
+                      class="postcard__tagbox d-flex justify-content-center align-items-center"
+                    >
+                      <a
+                        [routerLink]="['/postagem-edit', item.id]"
+                        class="text-info mr-3"
+                        href=""
+                        >Editar</a
+                      >
+                      <a
+                        [routerLink]="['/postagem-delete', item.id]"
+                        class="text-danger"
+                        href=""
+                        >Apagar</a
+                      >
                     </div>
                   </div>
-                </div>
+                </article>
               </div>
             </div>
-  
-          </div> -->
-          <!--/Card Todas as Postagens-->
-  
-          <!--Card Minhas Postagens-->
-          <div class="tab-pane fade" id="minhasPostagens" role="tabpanel" aria-labelledby="nav-minhasPostagens-tab">
-  
-            <div class="card-columns ">
-  
-              <div class="card text-center" style="max-width: 100%;" *ngFor='let item of listaPostagens'>
-                <div class="row no-gutters">
-                  <div class="col-md-4">
-                    <img src="{{item.imgUrl}}" alt="Imagem publicação" width="100%" height="100%">
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <h5 class="card-title">Tema: {{item.tema.descricao}}</h5>
-                      <p class="card-text">{{item.texto}}</p>
-                      <p class="card-text"><small class="text-muted">
-                        <strong>Contato: {{item.contato}}</strong>
-                      </small></p>
-                      <p class="card-text"><small class="text-muted">{{item.dataPublic | date: 'dd/MM/yyyy'}} às {{item.dataPublic | date: 'HH:mm'}}</small></p>
-  
-                      <a [routerLink]="['/postagem-edit', item.id]" class="text-info mr-3" href="">Editar</a>
-                      <a [routerLink]="['/postagem-delete', item.id]" class="text-danger" href="">Apagar</a>
-  
-                    </div>
-                  </div>
-                </div>
-              </div>
-  
-            </div>
-  
           </div>
-  
-          <!--/Card Minhas Postagens-->
         </div>
-  </div>
-</main>
 
-
-
-
-
-
-
-
-
-
-  <!-- Modal -->
-  <div class="modal fade" id="novaPostagem" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="staticBackdropLabel">Nova Postagem</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-
-          <div class="form-group">
-            <label for="texto">Foto</label>
-            <textarea [(ngModel)]='postagem.imgUrl'  class="form-control" name="imgUrl" id="imgUrl" rows="1"></textarea>
-          </div>
-
-          <div class="form-group">
-            <label for="texto">Texto</label>
-            <textarea [(ngModel)]='postagem.texto'  class="form-control" name="texto" id="texto" rows="3"></textarea>
-          </div>
-
-          <div class="form-group">
-            <label for="texto">Contato</label>
-            <input type="text"[(ngModel)]='postagem.contato'  class="form-control" name="contato" id="contato" rows="1">
-          </div>
-
-          <div class="form-group">
-            <label for="texto">Escolha um tema ou <a data-dismiss="modal" routerLink="/tema">cadastre um novo</a> </label>
-            <select name="tema" id="tema" class="form-control" [(ngModel)]='idTema' (change)='findByIdTema()'>
-                <option *ngFor='let item of listaTemas' value="{{item.id}}">{{item.descricao}}</option>
-            </select>
-          </div>
-
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-          <button type="button" class="btn btn-success" (click)="publicar()" data-dismiss="modal">Publicar</button>
-        </div>
+        <!--/Card Minhas Postagens-->
       </div>
     </div>
   </div>
+</div>

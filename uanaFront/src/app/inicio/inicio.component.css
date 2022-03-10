@@ -1,4 +1,4 @@
-main{
+.main{
     background-image: linear-gradient(to right top, #5c50a9, #4a6cb3, #4f82b4, #6a95b0, #90a5ad);
 }
 
@@ -18,7 +18,7 @@ main{
 
 /*Cards*/
 .dark {
-    background: #110f16;
+    background: #E1E5EA;
   }
   
   .light {
@@ -50,14 +50,14 @@ main{
     color: #ffffff;
   }
   .postcard.dark {
-    background-color: #18151f;
+    background-color: #E1E5EA;
   }
   .postcard.light {
     background-color: #e1e5ea;
   }
-  .postcard .t-dark {
+  /* .postcard .t-dark {
     color: #18151f;
-  }
+  } */
   .postcard a {
     color: inherit;
   }
