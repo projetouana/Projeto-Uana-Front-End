@@ -1,12 +1,12 @@
 <body>
   <div class="container main">
-  
+
       <div class="row">
           <div class="col-md-12">
               <h1 class="text-center">Apagar postagem</h1>
           </div>
       </div>
-  
+
       <div class="row">
           <div class="col-md-12">
               <h4 class="text-center">Você tem certeza que deseja apagar essa postagem?</h4>
@@ -21,18 +21,18 @@
           <div class="container">
             <div class="container py-4">
               <article class="postcard light blue">
-                <a class="postcard__img_link" href="#">
+
                   <img
                     class="postcard__img"
                     src="{{postagem.imgUrl}}"
                     alt="Image Title"
                   />
-                </a>
+
                 <div class="postcard__text align-items-center">
-                  <h1 class="postcard__title blue">
+                  <h1 class="postcard__title blue texto">
                     {{postagem.tema.descricao}}
                   </h1>
-                  <div class="postcard__subtitle small">
+                  <div class="postcard__subtitle small texto">
                     <time datetime="2020-05-25 12:00:00">
                       <i class="fas fa-calendar-alt mr-2"></i
                       >{{postagem.dataPublic | date: 'dd/MM/yyyy'}} às
@@ -40,13 +40,13 @@
                     </time>
                   </div>
                   <div class="postcard__bar"></div>
-                  <div class="postcard__preview-txt">{{postagem.texto}}</div>
+                  <div class="postcard__preview-txt texto">{{postagem.texto}}</div>
                   <ul class="postcard__tagbox d-flex justify-content-center">
-                    <li class="tag__item">
-                      <i class="fas fa-tag mr-2"></i>{{postagem.contato}}
+                    <li class="tag__item texto">
+                      <i class="fa fa-user" aria-hidden="true"></i>{{postagem.contato}}
                     </li>
 
-                    <li class="tag__item play blue">
+                    <li class="tag__item play blue texto">
                       {{postagem.usuario.nome}}
                     </li>
                   </ul>
@@ -56,7 +56,7 @@
           </div>
         </div>
       </div>
-  
+
       <!-- <div class="card-columns d-flex justify-content-center mt-5">
       <div class="card text-center" style="max-width: 540px;">
           <div class="row no-gutters">
@@ -79,13 +79,13 @@
           </div>
         </div>
       </div> -->
-  
+
       <div class="row mt-5">
           <div class="col-md-12 d-flex justify-content-center">
               <button class="btn btnCancelar mr-4" routerLink='/inicio'>Não</button>
               <button class="btn btnAtualizar" (click)='apagar()'>Sim</button>
           </div>
       </div>
-  
+
   </div>
 </body>
