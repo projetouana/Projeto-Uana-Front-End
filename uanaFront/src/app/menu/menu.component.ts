@@ -44,6 +44,7 @@ export class MenuComponent implements OnInit {
   }
 
   getAllTemas(){
+    this.listaTemas= []
     this.temaService.getAllTema().subscribe((resp: Tema[])=>{
       this.listaTemas = resp
     })
