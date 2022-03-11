@@ -1,6 +1,12 @@
 .main{
     background-image: linear-gradient(to right top, #5c50a9, #4a6cb3, #4f82b4, #6a95b0, #90a5ad);
 }
+.tituloInicio{
+  font-family: 'Sarala', sans-serif;
+  font-weight: bold;
+  color: #0C0B22;
+  line-height: 52px;
+}
 
 .fs-54{
     font-size: 54pt;
