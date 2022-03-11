@@ -1,3 +1,4 @@
+import { HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Usuario } from 'src/app/model/Usuario';
@@ -21,6 +22,7 @@ export class UserEditComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router
   ) { }
+
 
   ngOnInit(){
     window.scroll(0, 0)
@@ -48,7 +50,7 @@ export class UserEditComponent implements OnInit {
     if(this.usuario.senha != this.confirmarSenha){
       alert('As senha estão incorretas.')
     }else{
-      this.authservice.cadastrar(this.usuario).subscribe((resp: Usuario) => {
+      this.authservice.atualizar(this.usuario).subscribe((resp: Usuario) => {
         this.usuario = resp
         this.router.navigate(['/inicio'])
         alert('Usuario atualizado com sucesso! Faça o login novamente')
