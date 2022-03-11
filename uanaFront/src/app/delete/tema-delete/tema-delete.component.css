@@ -1,0 +1,57 @@
+body{
+    background-image: linear-gradient(to right top, #5c50a9, #4a6cb3, #4f82b4, #6a95b0, #90a5ad);
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.main{
+    height: 70vh;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(8px);
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.507);
+    border-radius: 10px;
+    margin-bottom: 0px;
+    width: 800px;
+}
+
+h1{
+    font-size: 32px;
+    font-family: 'Sarala', sans-serif;
+    color: #0C0B22;
+    line-height: 52px;
+}
+
+h4{
+    font-size: 24px;
+    font-family: 'Sarala', sans-serif;
+    color: white;
+    line-height: 52px;
+}
+
+h5{
+    color: #eacb30;
+}
+
+label, button{
+    font-family: 'Zen Kurenaido', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 26px;
+    color: #0C0B22;
+}
+
+.btnCancelar{
+    background: linear-gradient(90.17deg, #eacb30 0.19%, #f4e174 99.77%);
+    font-weight: bolder;
+    color: white;
+    width: 80px;
+}
+
+.btnAtualizar{
+    background: linear-gradient(90.17deg, #5c50a9 0.19%, #7064b9 99.77%);
+    font-weight: bolder;
+    color: white;
+    width: 80px;
+}

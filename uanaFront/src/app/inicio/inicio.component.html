@@ -1,5 +1,5 @@
 <div class="main">
-  <div class="container mb-0 mt-0 main" id="postagens">
+  <div class="container mb-0 mt-0" id="postagens">
     <nav>
       <div
         class="nav nav-tabs d-flex justify-content-center"
@@ -7,7 +7,7 @@
         role="tablist"
       >
         <a
-          class="nav-link active text-secondary font-weight-bold"
+          class="nav-link active tituloInicio font-weight-bold"
           id="nav-todasPostagens-tab"
           data-toggle="tab"
           href="#todasPostagens"
@@ -19,7 +19,7 @@
 
         <a
           (click)="findByIdUser()"
-          class="nav-link text-secondary font-weight-bold"
+          class="nav-link tituloInicio font-weight-bold"
           id="nav-minhasPostagens-tab "
           data-toggle="tab"
           href="#minhasPostagens"
@@ -42,39 +42,43 @@
           <div
             class="text-center"
             style="max-width: 100%"
-            *ngFor="let item of listaPostagens"
+            *ngFor='let item of listaPostagens'
           >
             <!--inicio-->
-            <div class="container">
+            <div class="container ">
               <div class="container py-4">
                 <article class="postcard light blue">
-                  <a class="postcard__img_link" href="#">
+
                     <img
                       class="postcard__img"
-                      src="{{ item.imgUrl }}"
+                      src="{{item.imgUrl}}"
                       alt="Image Title"
                     />
-                  </a>
+
                   <div class="postcard__text align-items-center">
-                    <h1 class="postcard__title blue">
+
+                    <h1 class="postcard__title blue texto">
                       {{ item.tema.descricao }}
+
                     </h1>
-                    <div class="postcard__subtitle small">
+                    <div class="postcard__subtitle small texto">
                       <time datetime="2020-05-25 12:00:00">
-                        <i class="fas fa-calendar-alt mr-2"></i
+
+                        <i class="fas fa-calendar-alt mr-2 texto"></i
                         >{{ item.dataPublic | date: "dd/MM/yyyy" }} às
                         {{ item.dataPublic | date: "HH:mm" }}
                       </time>
                     </div>
                     <div class="postcard__bar"></div>
-                    <div class="postcard__preview-txt">{{ item.texto }}</div>
-                    <ul class="postcard__tagbox d-flex justify-content-center">
+                    <div class="postcard__preview-txt texto">{{ item.texto }}</div>
+                    <ul class="postcard__tagbox d-flex justify-content-center texto">
                       <li class="tag__item">
-                        <i class="fas fa-tag mr-2"></i>{{ item.contato }}
+                        <i class="fa fa-user" aria-hidden="true"></i>  {{ item.contato }}
                       </li>
 
-                      <li class="tag__item play blue">
+                      <li class="tag__item play blue texto">
                         {{ item.usuario.nome }}
+
                       </li>
                     </ul>
                   </div>
@@ -103,30 +107,30 @@
             <!--inicio-->
             <div class="container">
               <div class="container py-4">
-                <article class="postcard dark blue">
-                  <a class="postcard__img_link" href="#">
+                <article class="postcard light blue">
+
                     <img
                       class="postcard__img"
-                      src="{{ item.imgUrl }}"
+                      src="{{item.imgUrl}}"
                       alt="Image Title"
                     />
-                  </a>
+
                   <div class="postcard__text align-items-center">
-                    <h1 class="postcard__title blue">
-                      {{ item.tema.descricao }}
+                    <h1 class="postcard__title blue texto">
+                      {{item.tema.descricao}}
                     </h1>
-                    <div class="postcard__subtitle small">
+                    <div class="postcard__subtitle small texto">
                       <time datetime="2020-05-25 12:00:00">
                         <i class="fas fa-calendar-alt mr-2"></i
-                        >{{ item.dataPublic | date: "dd/MM/yyyy" }} às
-                        {{ item.dataPublic | date: "HH:mm" }}
+                        >{{item.dataPublic | date: "dd/MM/yyyy"}} às
+                        {{item.dataPublic | date: "HH:mm"}}
                       </time>
                     </div>
                     <div class="postcard__bar"></div>
-                    <div class="postcard__preview-txt">{{ item.texto }}</div>
+                    <div class="postcard__preview-txt texto">{{item.texto}}</div>
                     <ul class="postcard__tagbox d-flex justify-content-center">
-                      <li class="tag__item">
-                        <i class="fas fa-tag mr-2"></i>{{ item.contato }}
+                      <li class="tag__item texto">
+                        <i class="fa fa-user" aria-hidden="true"></i>  {{item.contato}}
                       </li>
                     </ul>
                     <div
@@ -145,7 +149,6 @@
                         >Apagar</a
                       >
                     </div>
-
                   </div>
                 </article>
               </div>
