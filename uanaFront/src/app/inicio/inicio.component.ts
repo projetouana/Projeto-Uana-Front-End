@@ -66,7 +66,7 @@ export class InicioComponent implements OnInit {
     this.postagemService.getAllPostagens().subscribe((resp: Postagem[])=>{
       resp.forEach(item =>{
          if(!item.imgUrl){
-              item.imgUrl = "https://i.stack.imgur.com/MxLUy.jpg"
+              item.imgUrl = "https://i.imgur.com/lq3AfOm.png"
          }
          this.listaPostagens.push(item)
       })
