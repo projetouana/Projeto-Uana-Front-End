@@ -26,24 +26,24 @@
 .dark {
     background: #E1E5EA;
   }
-  
+
   .light {
-    background: #f3f5f7;
+    background-image: linear-gradient(45deg, #CBDAE5, #E1E5EA);
   }
-  
+
   a,
   a:hover {
     text-decoration: none;
     transition: color 0.3s ease-in-out;
   }
-  
+
   #pageHeaderTitle {
     margin: 2rem 0;
     text-transform: uppercase;
     text-align: center;
     font-size: 2.5rem;
   }
-  
+
   /* Cards */
   .postcard {
     flex-wrap: wrap;
@@ -59,7 +59,7 @@
     background-color: #E1E5EA;
   }
   .postcard.light {
-    background-color: #e1e5ea;
+    background-color: #A1A7AD;
   }
   /* .postcard .t-dark {
     color: #18151f;
@@ -78,6 +78,7 @@
   }
   .postcard .postcard__title {
     font-size: 1.75rem;
+    font-family: 'Zen Kurenaido', sans-serif;
   }
   .postcard .postcard__img {
     max-height: 180px;
@@ -107,6 +108,7 @@
     text-overflow: ellipsis;
     text-align: justify;
     height: 100%;
+    font-family: 'Zen Kurenaido', sans-serif;
   }
   .postcard .postcard__tagbox {
     display: flex;
@@ -115,10 +117,11 @@
     margin: 20px 0 0 0;
     padding: 0;
     justify-content: center;
+    font-family: 'Zen Kurenaido', sans-serif;
   }
   .postcard .postcard__tagbox .tag__item {
     display: inline-block;
-    background: rgba(83, 83, 83, 0.4);
+    background: rgba(255, 255, 255, 0.4);
     border-radius: 3px;
     padding: 2.5px 10px;
     margin: 0 5px 5px 0;
@@ -127,7 +130,7 @@
     transition: background-color 0.3s;
   }
   .postcard .postcard__tagbox .tag__item:hover {
-    background: rgba(83, 83, 83, 0.8);
+    background: rgba(87, 87, 87, 0.8);
   }
   .postcard:before {
     content: "";
@@ -136,14 +139,14 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-image: linear-gradient(-70deg, #424242, transparent 50%);
+    background-image: linear-gradient(-70deg, #E1E5EA, transparent 50%);
     opacity: 1;
     border-radius: 10px;
   }
   .postcard:hover .postcard__bar {
     width: 100px;
   }
-  
+
   @media screen and (min-width: 769px) {
     .postcard {
       flex-wrap: inherit;
@@ -162,6 +165,15 @@
     .postcard .postcard__text {
       padding: 3rem;
       width: 100%;
+    }
+    h1{
+      font-family: 'Sarala', sans-serif;
+    }
+    p{
+      font-family: 'Zen Kurenaido', sans-serif;
+    }
+    .texto{
+    color: #18151f;
     }
     .postcard .media.postcard__text:before {
       content: "";
@@ -194,7 +206,7 @@
     .postcard__text {
       padding: 2rem 3.5rem;
     }
-  
+
     .postcard__text:before {
       content: "";
       position: absolute;
@@ -203,11 +215,11 @@
       height: 130%;
       width: 55px;
     }
-  
+
     .postcard.dark .postcard__text:before {
       background: #18151f;
     }
-  
+
     .postcard.light .postcard__text:before {
       background: #e1e5ea;
     }
