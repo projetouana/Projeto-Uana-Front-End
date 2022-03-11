@@ -1,55 +1,52 @@
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <h1 class="text-center text-secondary">Atualizar meu usuário</h1>
+<body>
+    <div class="container main">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="text-center">Atualizar meu Usuário</h1>
+            </div>
         </div>
-    </div>
-
-    <div class="form-group forms ">
-        <label for="nome">Nome</label>
-        <input [(ngModel)]="usuario.nome" class="form-control" type="txt" name="nome" id="nome" aria-placeholder="Seu Nome">
-
-        <div class="form-group mt-2">
-            <label for="email">Email</label>
-            <input [(ngModel)]="usuario.email" class="form-control" type="email" name="email" id="email" aria-placeholder="Seu Email">
-        </div>
-
-        <div class="form-group">
-            <label for="foto">Link da foto</label>
-            <input [(ngModel)]="usuario.foto" class="form-control" type="txt" name="foto" id="foto"
-                aria-placeholder="Link da sua foto">
-        </div>
-
-        <div class="form-group">
-            <label for="senha">Senha</label>
-            <input (input)="confirmSenha($event)" class="form-control" type="password" name="senha" id="senha" aria-placeholder="Sua Senha">
-        </div>
-
-
-        <div class="form-group">
-            <label for="confirmeSenha">Confirmar Senha</label>
-            <input [(ngModel)]="usuario.senha" class="form-control" type="password" name="confirmeSenha" id="confirmeSenha"
-                aria-placeholder="Comfirme Sua Senha">
-        </div>
-
+    
+        <div class="form-group forms ">
+            <label for="nome">Nome</label>
+            <input [(ngModel)]="usuario.nome" class="form-control" type="txt" name="nome" id="nome" aria-placeholder="Seu Nome">
+    
+            <div class="form-group mt-2">
+                <label for="email">Email</label>
+                <input [(ngModel)]="usuario.email" class="form-control" type="email" name="email" id="email" aria-placeholder="Seu Email">
+            </div>
+    
             <div class="form-group">
-            <label for="tipo">Tipo de Usuário</label>
-            <select class="form-control" name="tipo" id="tipo" (change)="tipoUser($event)">
-                <option>Selecione um tipo de usuário:</option>
-                <option value="normal">Normal</option>
-                <option value="empresa/ong">Empresa/ONG</option>
-                <!--<option value="adm">Administrador</option> VERIFICAR-->
-            </select>
+                <label for="foto">Link da foto</label>
+                <input [(ngModel)]="usuario.foto" class="form-control" type="txt" name="foto" id="foto"
+                    aria-placeholder="Link da sua foto">
+            </div>
+    
+            <div class="form-group">
+                <label for="senha">Senha</label>
+                <input (input)="confirmSenha($event)" class="form-control" type="password" name="senha" id="senha" aria-placeholder="Sua Senha">
+            </div>
+    
+    
+            <div class="form-group">
+                <label for="confirmeSenha">Confirmar Senha</label>
+                <input [(ngModel)]="usuario.senha" class="form-control" type="password" name="confirmeSenha" id="confirmeSenha"
+                    aria-placeholder="Comfirme Sua Senha">
+            </div>
+    
+                <div class="form-group">
+                <label for="tipo">Tipo de Usuário</label>
+                <select class="form-control" name="tipo" id="tipo" (change)="tipoUser($event)">
+                    <option>Selecione um tipo de usuário:</option>
+                    <option value="normal">Normal</option>
+                    <option value="empresa/ong">Empresa/ONG</option>
+                    <!--<option value="adm">Administrador</option> VERIFICAR-->
+                </select>
+            </div>
+    
+            <div class="d-flex justify-content-center mt-5">
+                <button type="submit" class="btn btnCancelar mr-4" routerLink='/inicio'>Cancelar</button>
+                <button type="submit" class="btn btnAtualizar" (click)='atualizar()'>Atualizar</button>
+              </div>
         </div>
-
-        <div class="d-flex justify-content-center">
-            <button type="submit" class="btn-cancelar mr-4" routerLink='/inicio'>Cancelar</button>
-            <button type="submit" class="btn-cadastrar" (click)='atualizar()'>Atualizar</button>
-          </div>
-
     </div>
-
-
-
-
-</div>
+</body>
