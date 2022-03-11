@@ -1,45 +1,91 @@
-<div class="container mb-5 mt-5">
-
-    <div class="row">
-        <div class="col-md-12">
-            <h1 class="text-center text-secondary">Apagar postagem</h1>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-12">
-            <h4 class="text-center text-secondary">Você tem certeza que deseja apagar essa postagem?</h4>
-        </div>
-    </div>
-    
-    <div class="card-columns d-flex justify-content-center mt-5">
-    <div class="card text-center" style="max-width: 540px;">
-        <div class="row no-gutters">
-          <div class="col-md-4">
-            <img src="{{postagem.imgUrl}}" alt="Imagem publicação" width="100%" height="100%">
+<body>
+  <div class="container main">
+  
+      <div class="row">
+          <div class="col-md-12">
+              <h1 class="text-center">Apagar postagem</h1>
           </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Tema: {{postagem.tema.descricao}}</h5>
-              <p class="card-text">{{postagem.texto}}</p>
-              <p class="card-text"><small class="text-muted">
-                <strong>Contato: {{postagem.contato}}</strong>
-              </small></p>
-              <p class="card-text"><small class="text-muted">{{postagem.dataPublic | date: 'dd/MM/yyyy'}} às {{postagem.dataPublic | date: 'HH:mm'}}</small></p>
-              <p class="card-text"><small class="text-muted">
-                by: {{postagem.usuario.nome}}
-              </small></p>
+      </div>
+  
+      <div class="row">
+          <div class="col-md-12">
+              <h4 class="text-center">Você tem certeza que deseja apagar essa postagem?</h4>
+          </div>
+      </div>
+      <div class="card-columns mt-2 d-flex flex-column">
+        <div
+          class="text-center"
+          style="max-width: 100%"
+        >
+          <!--inicio-->
+          <div class="container">
+            <div class="container py-4">
+              <article class="postcard light blue">
+                <a class="postcard__img_link" href="#">
+                  <img
+                    class="postcard__img"
+                    src="{{postagem.imgUrl}}"
+                    alt="Image Title"
+                  />
+                </a>
+                <div class="postcard__text align-items-center">
+                  <h1 class="postcard__title blue">
+                    {{postagem.tema.descricao}}
+                  </h1>
+                  <div class="postcard__subtitle small">
+                    <time datetime="2020-05-25 12:00:00">
+                      <i class="fas fa-calendar-alt mr-2"></i
+                      >{{postagem.dataPublic | date: 'dd/MM/yyyy'}} às
+                      {{postagem.dataPublic | date: 'HH:mm'}}
+                    </time>
+                  </div>
+                  <div class="postcard__bar"></div>
+                  <div class="postcard__preview-txt">{{postagem.texto}}</div>
+                  <ul class="postcard__tagbox d-flex justify-content-center">
+                    <li class="tag__item">
+                      <i class="fas fa-tag mr-2"></i>{{postagem.contato}}
+                    </li>
+
+                    <li class="tag__item play blue">
+                      {{postagem.usuario.nome}}
+                    </li>
+                  </ul>
+                </div>
+              </article>
             </div>
           </div>
         </div>
       </div>
-    </div>
-
-    <div class="row mt-5">
-        <div class="col-md-12 d-flex justify-content-center">
-            <button class="btn btn-danger mr-4" routerLink='/inicio'>Não</button>
-            <button class="btn btn-success" (click)='apagar()'>Sim</button>
+  
+      <!-- <div class="card-columns d-flex justify-content-center mt-5">
+      <div class="card text-center" style="max-width: 540px;">
+          <div class="row no-gutters">
+            <div class="col-md-4">
+              <img src="{{postagem.imgUrl}}" alt="Imagem publicação" width="100%" height="100%">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Tema: {{postagem.tema.descricao}}</h5>
+                <p class="card-text">{{postagem.texto}}</p>
+                <p class="card-text"><small class="text-muted">
+                  <strong>Contato: {{postagem.contato}}</strong>
+                </small></p>
+                <p class="card-text"><small class="text-muted">{{postagem.dataPublic | date: 'dd/MM/yyyy'}} às {{postagem.dataPublic | date: 'HH:mm'}}</small></p>
+                <p class="card-text"><small class="text-muted">
+                  by: {{postagem.usuario.nome}}
+                </small></p>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
-
-</div>
+      </div> -->
+  
+      <div class="row mt-5">
+          <div class="col-md-12 d-flex justify-content-center">
+              <button class="btn btnCancelar mr-4" routerLink='/inicio'>Não</button>
+              <button class="btn btnAtualizar" (click)='apagar()'>Sim</button>
+          </div>
+      </div>
+  
+  </div>
+</body>
