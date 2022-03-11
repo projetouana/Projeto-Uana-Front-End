@@ -22,6 +22,10 @@ h1{
     line-height: 52px;
 }
 
+label > a {
+    color: #eacb30;
+}
+
 label, button{
     font-family: 'Zen Kurenaido', sans-serif;
     font-style: normal;
