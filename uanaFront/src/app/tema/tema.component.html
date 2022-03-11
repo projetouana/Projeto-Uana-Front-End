@@ -1,24 +1,27 @@
+<body class="color-tema">
+
+
 <div class="container-fluid">
 
-    <div class="row bg-secondary">
+    <div class="row">
 
-        <div class="col-md-12 text-white">
+        <div class="col-md-12 text-white ">
 
             <a routerLink="/inicio" class="text-white text-left">
                 <i class="fa-solid fa-circle-arrow-left"></i> Início
             </a>
 
-            <h1 class="fs-54 text-center">Temas</h1>
-            <h5 class="fs-18 text-center">Veja aqui todos os temas cadastrados ou cadastre um novo: </h5>
+            <h1 class="fs-54 text-center texto-Sarala">Temas</h1>
+            <h5 class="fs-18 text-center texto-Sarala">Veja aqui todos os temas cadastrados ou cadastre um novo </h5>
 
             <div class="row d-flex justify-content-center mt-4 mb-5">
                 <div class="col-md-3">
-                    <div class="form-group">
+                    <div class="form-group texto">
                         <input [(ngModel)]='tema.descricao' type="text" class="form-control" id="descricao" placeholder="Digite a descrição do tema">
                     </div>
 
-                    <div class="d-flex justify-content-center">
-                        <button class="btn btn-light" (click)='cadastrar()'>Cadastrar</button>
+                    <div class="d-flex justify-content-center texto-Sarala">
+                        <button class="btn btnCadastrar" (click)='cadastrar()'>Cadastrar</button>
                     </div>
                 </div>
             </div>
@@ -29,11 +32,11 @@
 
 </div>
 
-<div class="container">
+<div class="container color-b ">
 
     <div class="row mt-5">
         <div class="col-12">
-            <h2 class="text-center">Todos os temas</h2>
+            <h2 class="text-center texto-Sarala">Todos os temas</h2>
         </div>
     </div>
 
@@ -43,15 +46,15 @@
             <table class="table table-hover">
                 <thead>
                   <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">descrição</th>
-                    <th scope="col" class="text-right">Modificações</th>
+                    <th scope="col">ID</th>
+                    <th scope="col texto-Sarala">Descrição</th>
+                    <th scope="col texto-Sarala" class="text-right">Modificações</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr *ngFor='let i of listaTemas'> <!--Montei um For construir minha tabela-->
-                    <th>{{i.id}}</th>
-                    <td>{{i.descricao}}</td>
+                    <th class="texto">{{i.id}}</th>
+                    <td class="texto">{{i.descricao}}</td>
                     <td class="d-flex justify-content-end">
                       <button class="btn btn-info mr-3" [routerLink]="['/tema-edit', i.id]" >Editar</button>
                       <button class="btn btn-danger" [routerLink]="['/tema-delete', i.id]">Apagar</button>
@@ -64,3 +67,4 @@
     </div>
 
 </div>
+</body>
