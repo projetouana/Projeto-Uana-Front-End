@@ -28,7 +28,7 @@
   }
 
   .light {
-    background-image: linear-gradient(45deg, #CBDAE5, #E1E5EA);
+
   }
 
   a,
@@ -56,10 +56,10 @@
     color: #ffffff;
   }
   .postcard.dark {
-    background-color: #E1E5EA;
+    background-color: #e1e5ea;
   }
   .postcard.light {
-    background-color: #A1A7AD;
+    background-color: #ecf6fd;
   }
   /* .postcard .t-dark {
     color: #18151f;
@@ -121,7 +121,7 @@
   }
   .postcard .postcard__tagbox .tag__item {
     display: inline-block;
-    background: rgba(255, 255, 255, 0.4);
+    background: rgba(71, 71, 71, 0.4);
     border-radius: 3px;
     padding: 2.5px 10px;
     margin: 0 5px 5px 0;
@@ -139,7 +139,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-image: linear-gradient(-70deg, #E1E5EA, transparent 50%);
+    background-image: linear-gradient(-70deg, #a2c9fc, transparent 50%);
     opacity: 1;
     border-radius: 10px;
   }
@@ -221,7 +221,7 @@
     }
 
     .postcard.light .postcard__text:before {
-      background: #e1e5ea;
+      background: #eeeff1;
     }
   }
   /* COLORS */
