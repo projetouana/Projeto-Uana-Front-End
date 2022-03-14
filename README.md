@@ -1,5 +1,5 @@
 <h1>Uaná</h1>
-<img src= "https://i.imgur.com/qYy9TPy.png" align="center" alt="logo" width="250"/>
+<h1  align="center"><img src= "https://i.imgur.com/qYy9TPy.png" align="center" alt="logo" width="250"/></h1>
 
 <h2>Descrição do Projeto</h2>
 
@@ -23,7 +23,7 @@ Gerando acesso a serviços, informação e dicas para diminuir o gasto energéti
 <hr>
 
 # Copiar o Repósitorio
-`git clone https://github.com/larissa-oliv/Projeto-Uana-Front-End`
+`git clone https://github.com/projetouana/Projeto-Uana-Front-End`
 
 ## Execução do Front-end
 
@@ -39,23 +39,23 @@ O MySql precisa estar rodando em segundo plano, pois o spring irá criar um banc
 Lembre-se de alterar o nome de usuario e senha do MySql para que fique de acordo com o instalado em sua maquina.<br/>
 O backend será executado na porta 8080.
 
-![Capturar]
+![Capturar](https://github.com/projetouana/Projeto-Uana-Front-End/blob/main/uanaFront/src/assets/img/Swagger.png)
 
 ## Rodando Aplicação
 
 Após a execução do back-end e do front-end a aplicação já estará disponivel para uso local.
 
-![2]
+<h1  align="center"><img src= "https://github.com/projetouana/Projeto-Uana-Front-End/blob/main/uanaFront/src/assets/img/app%20prop.png" align="center" alt="logo"/></h1>
 
 
-![3]
+![3](https://github.com/projetouana/Projeto-Uana-Front-End/blob/main/uanaFront/src/assets/img/uana.png)
 
 
 # Estrutura do banco de dados da aplicação
-![modelo logico]
+<h1  align="center"><img src= "https://github.com/projetouana/Projeto_UANA/blob/main/Documenta%C3%A7%C3%A3o/ImgPI/DerProjetoIntegrador.png" align="center" alt="logo"/></h1>
 
 
 # Mapa da Aplicação
 
-![mapa]
+![mapa](https://github.com/projetouana/Projeto-Uana-Front-End/blob/main/uanaFront/src/assets/img/Diagrama_uana.png)
 
