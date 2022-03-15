@@ -48,4 +48,19 @@ body {
     color: #555; 
 }
 
+/* .fundoCard{
+    background-color: #5c50a9;
+    backdrop-filter: blur(8px);
+    margin-bottom: 30px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.507);
+    border-radius: 10px;
+} */
+
+.card{
+    background-color: #90a5ad;
+    font-family:'Sarala', sans-serif;
+
+}
+
 
