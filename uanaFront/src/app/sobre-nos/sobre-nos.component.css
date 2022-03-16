@@ -6,6 +6,7 @@ body {
     background: #e8cbc0;
     background: -webkit-linear-gradient(to right top, #5c50a9, #4a6cb3, #4f82b4, #6a95b0, #90a5ad);
     background-image: linear-gradient(to right top, #5c50a9, #4a6cb3, #4f82b4, #6a95b0, #90a5ad);    min-height: 100vh;
+    padding-top: 50px;
 }
 
 .voltar{
