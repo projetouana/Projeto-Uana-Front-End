@@ -12,17 +12,17 @@
         <p class="m-0 font-weight-bold fs-16 mr-1">Olá, {{nome}}! </p>
       </li>
       <li>
-          <a [routerLink]="['/user-edit', id]"><i class="fa-solid fa-gears edit-user"></i></a>
+          <a [routerLink]="['/user-edit', id]" title="Editar Usuário"><i class="fa-solid fa-gears edit-user"></i></a>
       </li>
   </ul>
   <ul class="navbar-nav mr-auto d-flex align-items-center mt-1">
      <li class="d-flex justify-content-center">
-      <a href="" data-toggle="modal" data-target="#novaPostagem"><i class="fa-solid fa-square-plus post-img" (click)="getAllTemas()"></i></a>
+      <a href="" data-toggle="modal" data-target="#novaPostagem" alt="Nova Postagem" title="Nova Postagem"><i class="fa-solid fa-square-plus post-img" (click)="getAllTemas()"></i></a>
       </li>
   </ul>
   <ul class="navbar-nav ml-auto d-flex align-items-center mt-1">
       <li class="nav-item pl-3">
-          <a href="" class="mr-0 font-weight-bold fs-11" (click)='sair()'><i class="fa-solid fa-power-off post-img"></i></a>
+          <a href="" class="mr-0 font-weight-bold fs-11" (click)='sair()' alt="Sair" title="Sair"><i class="fa-solid fa-power-off post-img"></i></a>
        </li>
   </ul>
   </div>
