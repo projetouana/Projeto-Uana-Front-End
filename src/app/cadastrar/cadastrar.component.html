@@ -10,12 +10,12 @@
 
                     <h1 class="text-center titulo mt-3">Cadastre-se</h1>
 
-                    <div class="form-group forms ">
-                        <label for="nome">Nome</label>
+                    <div class="form-group forms">
+                        <label for="nome">*Nome</label>
                         <input [(ngModel)]="usuario.nome" class="form-control" type="txt" name="nome" id="nome" aria-placeholder="Seu Nome">
 
                         <div class="form-group mt-2">
-                            <label for="email">E-mail</label>
+                            <label for="email">*E-mail</label>
                             <input [(ngModel)]="usuario.email" class="form-control" type="email" name="email" id="email" aria-placeholder="Seu Email">
                         </div>
 
@@ -26,19 +26,19 @@
                         </div> -->
 
                         <div class="form-group">
-                            <label for="senha">Senha</label>
-                            <input (input)="confirmSenha($event)" class="form-control" type="password" name="senha" id="senha" aria-placeholder="Sua Senha">
+                            <label for="senha">*Senha</label>
+                            <input (input)="confirmSenha($event)" class="form-control" type="password" name="senha" id="senha" aria-placeholder="Sua Senha" placeholder="Minimo 8 caracteres">
                         </div>
 
 
                         <div class="form-group">
-                            <label for="confirmeSenha">Confirmar Senha</label>
+                            <label for="confirmeSenha">*Confirmar Senha</label>
                             <input [(ngModel)]="usuario.senha" class="form-control" type="password" name="confirmeSenha" id="confirmeSenha"
-                                aria-placeholder="Comfirme Sua Senha">
+                                aria-placeholder="Comfirme Sua Senha" placeholder="Minimo 8 caracteres">
                         </div>
 
                             <div class="form-group">
-                            <label for="tipo">Tipo de Usuário</label>
+                            <label for="tipo">*Tipo de Usuário</label>
                             <select class="form-control" name="tipo" id="tipo" (change)="tipoUsuario($event)">
                                 <option>Selecione um tipo de usuário:</option>
                                 <option value="normal">Normal</option>
@@ -46,6 +46,8 @@
                                 <!--<option value="adm">Administrador</option> VERIFICAR-->
                             </select>
                         </div>
+
+                        <p><small>* Campo Obrigatório</small></p>
 
                         <div class="d-flex justify-content-center">
 

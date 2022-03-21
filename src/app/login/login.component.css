@@ -33,7 +33,7 @@ p{
     color: #4B4B4B;
 }
 
-label{
+label, .email{
     font-family: 'Zen Kurenaido', sans-serif;
     font-size: 18px;
     color: #4B4B4B;
